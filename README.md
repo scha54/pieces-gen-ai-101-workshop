@@ -1,14 +1,14 @@
 # pieces-gen-ai-101-workshop
 This is the repository to store the capstone project for the Pieces Gen AI 101 Workshop
 
-Fun Facts Generator App
-Overview
+# Fun Facts Generator App
+# Overview
 The Fun Facts Generator App is a fun, interactive web application that displays random "fun facts" about the User topic. Built using HTML, CSS, and JavaScript, this app allows users to apply the concepts of prompt engineering, context setting, and handling AI limitations (hallucinations) learned in GenAI 101.
 
-Purpose
+# Purpose
 This app was designed as a capstone project for the GenAI 101 workshop, allowing participants to:
 
-Understand prompt engineering and context setting.
+# Understand prompt engineering and context setting.
 Recognize and address potential hallucinations in AI-generated content.
 Practice creating and customizing a simple, shareable web application using Pieces Copilot and basic web technologies.
 Key Features
@@ -18,7 +18,7 @@ Easy Hosting on GitHub Pages: With no additional setup, users can deploy their a
 Live Demo
 You can view a sample app hosted on GitHub Pages here: https://ialimustufa.github.io/genai101-project/
 
-Step-by-Step Project Guide
+# Step-by-Step Project Guide
 This project is designed to be completed in 15 minutes. Each step incorporates key concepts from GenAI 101.
 
 Step 1: Define the Project Goal
@@ -69,12 +69,12 @@ Open the app in a browser using your GitHub Pages link.
 Click the Generate Another Fun Fact button.
 A new random fun fact will appear each time you click the button.
 Share the link with friends or on social media to let others enjoy the small project you build with GenAI and Pieces!
-Troubleshooting Tips
+# Troubleshooting Tips
 Fun facts not displaying?
 Check that script is correct in index.html.
 Ensure each fun fact in the facts array is enclosed in quotes and separated by commas.
 Site not loading on GitHub Pages?
 Confirm you’ve set the source to the main branch in GitHub Pages settings.
 Make sure your GitHub Pages URL is correctly formatted as https://yourusername.github.io/genai101/.
-License
+# License
 This project is open-source and available under the MIT License. Feel free to use, modify, and distribute it as you like.
