@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolkata Fun Facts</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3b3b5c;
+            margin-bottom: 24px;
+        }
+
+        .fact-box {
+            background: #f1f5f9;
+            border-radius: 10px;
+            padding: 24px 18px;
+            font-size: 1.15rem;
+            color: #22223b;
+            min-height: 80px;
+            margin-bottom: 28px;
+            transition: background 0.3s;
+        }
+
+        button {
+            background: #6366f1;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 28px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kolkata Fun Facts</h1>
+        <div id="fact-box" class="fact-box">
+            Click the button to see a fun fact about Kolkata!
+        </div>
+        <button id="new-fact-btn">Show Me a Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Kolkata (then Calcutta) was the capital of British India from 1772 until 1911, when the capital was shifted to Delhi.",
+            "Kolkata is the only Indian city with an operational tram network, which began in 1902.",
+            "The Howrah Bridge, opened in 1943, is one of the world’s busiest cantilever bridges and a symbol of Kolkata.",
+            "Nobel laureate Rabindranath Tagore, the first Asian to win a Nobel Prize, was born in Kolkata in 1861.",
+            "The International Kolkata Book Fair is the largest non-trade book fair in Asia and one of the most attended in the world.",
+            "Mother Teresa founded the Missionaries of Charity in Kolkata in 1950, which continues her humanitarian work globally.",
+            "Eden Gardens, established in 1864, is one of the oldest and largest cricket stadiums in the world.",
+            "Kolkata is widely regarded as India’s cultural capital, known for its contributions to literature, art, theater, and cinema.",
+            "Kolkata’s Durga Puja is recognized by UNESCO as an Intangible Cultural Heritage of Humanity (since 2021).",
+            "Kolkata is famous for its diverse street food, including phuchka (pani puri), kathi rolls, and sweets like rasgulla and sandesh, with rasgulla receiving a Geographical Indication (GI) tag for its Bengali origin."
+        ];
+
+        const factBox = document.getElementById('fact-box');
+        const newFactBtn = document.getElementById('new-fact-btn');
+        let lastFactIndex = -1;
+
+        function getRandomFactIndex() {
+            let idx;
+            do {
+                idx = Math.floor(Math.random() * facts.length);
+            } while (idx === lastFactIndex && facts.length > 1);
+            lastFactIndex = idx;
+            return idx;
+        }
+
+        function showRandomFact() {
+            const idx = getRandomFactIndex();
+            factBox.textContent = facts[idx];
+        }
+
+        newFactBtn.addEventListener('click', showRandomFact);
+    </script>
+</body>
+</html>
